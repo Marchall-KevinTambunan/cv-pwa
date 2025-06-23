@@ -1,21 +1,10 @@
 {
   "name": "CV Marchall Kevin Tambunan",
   "short_name": "CV Kevin",
-  "start_url": ".",
+  "description": "Curriculum Vitae digital yang bisa di-install sebagai aplikasi.",
+  "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#2563eb",
-  "orientation": "portrait",
-  "icons": [
-    {
-      "src": "icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ]
+  "theme_color": "#0d9488",
+  "icons": []
 }

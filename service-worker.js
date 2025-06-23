@@ -1,17 +1,12 @@
-self.addEventListener("install", (e) => {
-  e.waitUntil(
-    caches.open("cv-kevin").then((cache) =>
-      cache.addAll([
-        "/",
-        "/index.html",
-        "/kevin.jpg",
-        "/manifest.json"
-      ])
-    )
-  );
+self.addEventListener('install', function (event) {
+  console.log('[ServiceWorker] Installed');
 });
-self.addEventListener("fetch", (e) => {
-  e.respondWith(
-    caches.match(e.request).then((res) => res || fetch(e.request))
-  );
+
+self.addEventListener('activate', function (event) {
+  console.log('[ServiceWorker] Activated');
+});
+
+self.addEventListener('fetch', function (event) {
+  // Ini hanya mendengarkan semua fetch, tapi tidak melakukan cache
+  console.log('[ServiceWorker] Fetching:', event.request.url);
 });
